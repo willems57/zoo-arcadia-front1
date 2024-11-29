@@ -1,0 +1,87 @@
+<div class="hero-scene text-center text-white">
+        <div class="hero-scene-content">
+            <h1>Veterinaires</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rapportsModal">Rapports veterinaires</button>
+        </div>
+    
+        <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+    
+        
+        </div>
+
+        </div>
+    </div>
+    
+    
+    
+      <!-- Modal pour l'edition-->
+      <div class="modal fade" id="rapportsModal" tabindex="-1" aria-labelledby="rapportsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="rapportsModalLabel">Rapports veterinaires</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!--formulaire de dans la modal-->
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="datavInput" class="form-label">Date</label>
+                        <input type="datetime-local" class="form-control" id="datevInput" name="Datev"> 
+                      </div>
+
+                      <div>
+                        <label for="photovInput" class="form-label">Photo</label>
+                        <input type="file" class="form-control" id="photovInput" name="Photov"> 
+                    </div>
+
+                      <div class="mb-3">
+                        <label for="enclosInput" class="form-label">EnclosID</label>
+                        <input type="text" class="form-control" id="enclosInput" placeholder="EnclosID"> 
+                    </div>
+    
+                    <div class="mb-3">
+                      <label for="nomAnInput" class="form-label">AnnimalId</label>
+                      <input type="text" class="form-control" id="nomAnInput" name="NomAn"> 
+                    </div>
+        
+                    <div class="mb-3">
+                      <label for="poidsInput" class="form-label">Poids</label>
+                      <input type="number" class="form-control" id="poidsInput" name="Poids">
+                    </div>
+
+                    <div class="mb-3">
+                        <div>
+                            <label for="allimentsInput" class="form-label">Allimentation</label>
+                            <input type="text" class="form-control" id="allimentsInput" placeholder="Allimentation" name="Alliments"> 
+                        </div>
+            
+                        <div>
+                            <label for="poidsaInput" class="form-label">poids (En Kg)</label>
+                            <input type="number" class="form-control" id="poidsaInput" placeholder="Quantite" name="Quantite"> 
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="OBSInput" class="form-label">Observation</label>
+                        <input type="text" class="form-control" id="OBSInput" placeholder="observation" name="Observation"> 
+                    </div>
+        
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary">Enregistrer</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <div class="mb-3"></div>
+      <div class="text-center mb-3">
+        <a href="/rapport" class="btn btn-primary">voire</a>
+    </div>

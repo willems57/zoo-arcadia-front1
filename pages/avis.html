@@ -1,0 +1,106 @@
+<div class="hero-scene text-center text-marron">
+    <div class="hero-scene-content">
+        <h1>Avis</h1>
+    </div>
+</div>
+
+<div class="container">
+  <div class="text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#avisModal">Ajouter un commentair</button>
+  </div>
+
+  <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+
+  
+  </div>
+
+  </div>
+</div>
+
+
+<!-- Modal pour l'edition de photo-->
+<div class="modal fade" id="avisModal" tabindex="-1" aria-labelledby="avisModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="avisModalLabel">Donner un avis</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!--formulaire de dans la modal-->
+      <div class="modal-body">
+          <form>
+
+            <div class="mb-3">
+              <label for="dateavisInput" class="form-label">Date</label>
+              <input type="datetime-local" class="form-control" id="dateavisInput"> 
+            </div>
+
+              <div class="mb-3">
+                <label for="pseudoInput" class="form-label">pseudo</label>
+                <input type="text" class="form-control" id="pseudoInput" name="pseudo"> 
+              </div>
+
+              <div class="mb-3">
+                <label for="commanteairavisInput" class="form-label">Commantaire</label>
+                <input type="text" class="form-control" id="commantaireavisInput" name="Commantaireavis"> 
+              </div>
+  
+              <div class="mb-3">
+                <label for="ImageavisInput" class="form-label">Images</label>
+                <input type="file" class="form-control" id="ImageavisInput" name="Imageavis">
+              </div>
+  
+              <div class="text-center">
+                  <button type="button" class="btn btn-primary">Enregistrer</button>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal pour suppression de photo-->
+<div class="modal fade" id="DeleteavisModal" tabindex="-1" aria-labelledby="DeleteavisModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="DeleteavisModalLabel"> Etes-vous sur de vouloir supprimer</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!--formulaire dans la modal-->
+      <div class="modal-body">
+          <form>
+              <div class="mb-3">
+                <p>titre</p>
+               <img src="../images/gettyimages-1316145932-612x612.jpg" class="rounded w-100"/>
+              </div>
+  
+              <div class="text-center">
+                  <button type="button" class="btn btn-danger">Supprimer</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mb-3"></div>
+<div class="text-center">
+  <a href="#" class="btn btn-primary">voire les avis</a>
+</div>
+
+<div class="mb-3"></div>
+        <div class="container">
+          <div class="text-center">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DeleteavisModal">Supprimer un avis</button>
+          </div>
+        
+          <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+        
+          
+          </div>
+        
+          </div>
+        </div>

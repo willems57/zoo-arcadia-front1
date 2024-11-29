@@ -1,0 +1,157 @@
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1>Services</h1>
+    </div>
+</div>
+
+<div class="container text-center pb-3">
+        <a href="/servicesedit" class="btn btn-primary">New Services</a>
+    </div>
+
+    <article>
+        <div class="container p-4">
+            <h2 class="text-center text-white">Safari en petit train</h2>
+            <div class="row row-cols-2 align-items-center">
+                <div class="col">
+                    <p class="text-justify text-white">
+                        Des équipes de mini train sont a la pour assurer le transport de tous visiteur désireux de continue la visite du parc en étant véhiculer.
+                    </p>
+                </div>
+                <div class="col">
+                    <img class="w-100 rounded" src="../images/Safaritrain-compress-scaled.jpg"/>
+                </div>
+            </div>
+            <div class="text-center pt-4">
+                <a href="/safari" class="btn btn-primary">Safari</a>
+            </div>
+        </div>
+    </article>
+
+    <article>
+                <div class="container p-4">
+                    <h2 class="text-center text-white">Visite guidée</h2>
+                    <div class="row row-cols-2 align-items-center">
+                        <div class="col">
+                            <img class="w-100 rounded" src="../images/Zoo-de-Granby_Corpo_Visite-de-coulisses_1.webp"/>
+                        </div>
+                        <div class="col">
+                            <p class="text-justify text-white">
+                                nos différents équipes de d’accompagnateur seront a vos cote pour vous guide tout au long de votre visite dans le multiples recoins de notre parc animalier.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center pt-4">
+                        <a href="/visite" class="btn btn-primary">Visite guidée</a>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+            <div class="container p-4">
+                <h2 class="text-center text-white">Restauration</h2>
+                <div class="row row-cols-12 align-items-center">
+                    <div class="col">
+                        <p class="text-justify text-white">
+                            le zoo vous propose une gamme de choix très diversifier de de saveur culinaire que vous pourrez apprécier soit en terrasse, soit a l’air libre ou en sale.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img class="w-100 rounded" src="../images/IMG-20230210-WA0001.webp"/>
+                    </div>
+                </div>
+                <div class="text-center pt-4">
+                    <a href="/restauration" class="btn btn-primary">Restauration</a>
+                </div>
+            </div>
+        </article>
+
+        <div class="mb-3"></div>
+        <div class="container">
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#servicesModal">Ajouter un services</button>
+            </div>
+        
+            <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+        
+            
+            </div>
+        
+            </div>
+        </div>
+        
+        
+          <!-- Modal pour l'edition de photo-->
+          <div class="modal fade" id="servicesModal" tabindex="-1" aria-labelledby="servicesModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title fs-5" id="servicesModalLabel">Edition services</h2>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--formulaire de dans la modal-->
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="servicesInput" class="form-label">Nom</label>
+                          <input type="text" class="form-control" id="servicesInput" name="Services"> 
+                        </div>
+        
+                        <div class="mb-3">
+                          <label for="descriptionSInput" class="form-label">Description</label>
+                          <input type="text" class="form-control" id="descriptionSInput" placeholder="DescriptionS"> 
+                        </div>
+            
+                        <div class="mb-3">
+                          <label for="imageSInput" class="form-label">Image</label>
+                          <input type="file" class="form-control" id="imageSInput">
+                        </div>
+            
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary">Enregistrer</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        
+          <!-- Modal pour suppression de photo-->
+          <div class="modal fade" id="DeleteservicesModal" tabindex="-1" aria-labelledby="DeleteservicesModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title fs-5" id="DeleteservicesModalLabel"> Etes-vous sur de vouloir supprimer</h2>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--formulaire dans la modal-->
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <p>titre</p>
+                         <img src="../images/gettyimages-1316145932-612x612.jpg" class="rounded w-100"/>
+                        </div>
+            
+                        <div class="text-center">
+                            <button type="button" class="btn btn-danger">Supprimer</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="mb-3"></div>
+          <div class="container">
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DeleteservicesModal">Supprimer un services</button>
+            </div>
+          
+            <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+          
+            
+            </div>
+          
+            </div>
+          </div>

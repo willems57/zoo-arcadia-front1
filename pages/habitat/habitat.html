@@ -1,0 +1,162 @@
+<div class="hero-scene text-center text-white">
+  <div class="hero-scene-content">
+      <h1>Habitat</h1>
+  </div>
+</div>
+
+<div class="text-center pt-4">
+  <a href="/enclos" class="btn btn-primary">Enclos</a>
+</div>
+
+<div class="mb-3"></div>
+  <article>
+      <div class="container p-4">
+          <h2 class="text-center text-white">Jungle</h2>
+          <div class="row row-cols-2 align-items-center">
+              <div class="col">
+                  <p class="text-justify text-white">
+                    Nous avons dans notre zoo 1jaguar et 2 perroquet qui nous viennes d'Amazonie ainsi qu’un orang-outan qui nous viens d'Asie du sud-est. 
+                  </p>
+              </div>
+              <div class="col">
+                  <img class="w-100 rounded" src="../images/images (2).jpg"/>
+              </div>
+          </div>
+          <div class="text-center pt-4">
+              <a href="/" class="btn btn-primary">Jungle</a>
+          </div>
+      </div>
+  </article>
+
+  <article>
+              <div class="container p-4">
+                  <h2 class="text-center text-white">Savane</h2>
+                  <div class="row row-cols-2 align-items-center">
+                      <div class="col">
+                          <img class="w-100 rounded" src="../images/elephant-donald-robitaille (1).jpg"/>
+                      </div>
+                      <div class="col">
+                          <p class="text-justify text-white">
+                            Nous avons dans notre zoo un éléphant, une girafe et un rhinocéros qui nous viennes tous droit d'Afrique.
+                          </p>
+                      </div>
+                  </div>
+                  <div class="text-center pt-4">
+                      <a href="/" class="btn btn-primary">Savane</a>
+                  </div>
+              </div>
+          </article>
+
+          <div class="container p-4">
+              <h2 class="text-center text-white">Marais</h2>
+              <div class="row row-cols-12 align-items-center">
+                  <div class="col">
+                      <p class="text-justify text-white">
+                        Notre zoo héberge 3 espèces d’animaux des marais différents (un groupe d’hippopotames, un caïman, et une famille de capybara).
+                      </p>
+                  </div>
+                  <div class="col">
+                      <img class="w-100 rounded" src="../images/B9727968156Z.1_20210813182918_000+GCGINTKON.2-0.jpg"/>
+                  </div>
+              </div>
+              <div class="text-center pt-4">
+                  <a href="/" class="btn btn-primary">Marais</a>
+              </div>
+          </div>
+      </article>
+
+      <div class="container">
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#habitatModal">Nouvelle habitat</button>
+        </div>
+      
+        <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+      
+        
+        </div>
+      
+        </div>
+      </div>
+      
+      
+      <!-- Modal pour l'edition de photo-->
+      <div class="modal fade" id="habitatModal" tabindex="-1" aria-labelledby="habitatModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="habitatModalLabel">Nouvelle Habitat</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!--formulaire de dans la modal-->
+            <div class="modal-body">
+                <form>
+      
+                  <div class="mb-3">
+                    <label for="datehInput" class="form-label">Dateh</label>
+                    <input type="datetime-local" class="form-control" id="datehInput" name="Dateh"> 
+                  </div>
+      
+                    <div class="mb-3">
+                      <label for="habitatInput" class="form-label">Habitat</label>
+                      <input type="text" class="form-control" id="habitatInput" name="Habitat"> 
+                    </div>
+      
+                    <div class="mb-3">
+                      <label for="descriptionhInput" class="form-label">Description</label>
+                      <input type="text" class="form-control" id="descriptionhInput" name="Description"> 
+                    </div>
+        
+                    <div class="mb-3">
+                      <label for="ImagehInput" class="form-label">Images</label>
+                      <input type="file" class="form-control" id="ImagehInput">
+                    </div>
+        
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary">Enregistrer</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Modal pour suppression de photo-->
+      <div class="modal fade" id="DeletehabitatModal" tabindex="-1" aria-labelledby="DeletehabitatModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="DeletehabitatModalLabel"> Etes-vous sur de vouloir supprimer</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!--formulaire dans la modal-->
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                      <p>titre</p>
+                     <img src="../images/gettyimages-1316145932-612x612.jpg" class="rounded w-100"/>
+                    </div>
+        
+                    <div class="text-center">
+                        <button type="button" class="btn btn-danger">Supprimer</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mb-3"></div>
+      <div class="container">
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DeletehabitatModal">Supprimer un habitat</button>
+        </div>
+      
+        <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+      
+        
+        </div>
+      
+        </div>
+      </div>

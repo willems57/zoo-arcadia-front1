@@ -1,0 +1,66 @@
+<div class="hero-scene text-center text-white">
+        <div class="hero-scene-content">
+            <h1>Employers</h1>
+        </div>
+    </div>
+
+   
+<div class="container">
+    <div class="text-center">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allimentationModal">Allimentation journalier</button>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+
+    
+    </div>
+
+    </div>
+</div>
+
+
+
+  <!-- Modal pour l'edition-->
+  <div class="modal fade" id="allimentationModal" tabindex="-1" aria-labelledby="allimentationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="allimentationModalLabel">allimentation journalier</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!--formulaire de dans la modal-->
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                    <label for="dataInput" class="form-label">Date</label>
+                    <input type="datetime-local" class="form-control" id="dateaInput"> 
+                  </div>
+
+                <div class="mb-3">
+                  <label for="nomAnInput" class="form-label">AnnimalId</label>
+                  <input type="text" class="form-control" id="nomAnInput" name="NomAn"> 
+                </div>
+
+                <div class="mb-3">
+                  <label for="allimentsInput" class="form-label">Alliments</label>
+                  <input type="text" class="form-control" id="allimentsInput" name="Alliments"> 
+                </div>
+    
+                <div class="mb-3">
+                  <label for="poidsaInput" class="form-label">Quantite en Kg</label>
+                  <input type="number" class="form-control" id="poidsaInput" name="Quantite">
+                </div>
+    
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="mb-3"></div>
+  <div class="text-center">
+    <a href="#" class="btn btn-primary">voire</a>
+</div>

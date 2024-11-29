@@ -1,0 +1,121 @@
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1>Annimaux</h1>
+    </div>
+</div>
+
+<div class="container text-center pb-3">
+        <a href="/newannimaux" class="btn btn-primary">New</a>
+    </div>
+
+    <div class="mb-3"></div>
+        <div class="container">
+          <div class="text-center">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#annimauxModal">Nouveaux annimaux</button>
+          </div>
+        
+          <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+        
+          
+          </div>
+        
+          </div>
+        </div>
+        
+        
+        <!-- Modal pour l'edition de photo-->
+        <div class="modal fade" id="annimauxModal" tabindex="-1" aria-labelledby="annimauxModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="annimauxModalLabel">Nouveaux annimaux</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!--formulaire de dans la modal-->
+              <div class="modal-body">
+                <form>
+
+                    <div>
+                        <label for="photoAnInput" class="form-label">Photo</label>
+                        <input type="file" class="form-control" id="photoAnInput" name="PhotoAn"> 
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="habitatInput" class="form-label">HabitatID</label>
+                        <input type="text" class="form-control" id="habitatInput" placeholder="habitat" name="Habitat"> 
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="enclosInput" class="form-label">EnclosID</label>
+                        <input type="text" class="form-control" id="enclosInput" placeholder="Enclos" name="Enclos"> 
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="raceInput" class="form-label">RaceID</label>
+                        <input type="text" class="form-control" id="raceInput" placeholder="Race" name="Race"> 
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="annimauxInput" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="annimauxInput" placeholder="nom" name="Annimaux"> 
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="DateAnInput" class="form-label">Date de naissance</label>
+                        <input type="date" class="form-control" id="DateAnInput" name="DateAn"> 
+                    </div>
+        
+                    <div class="mb-3">
+                      <label for="SexeInput" class="form-label">Sexe</label>
+                      <input type="text" class="form-control" id="SexeInput" placeholder="Sexe" name="Sexe"> 
+                    </div>
+                   
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Enregister</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <!-- Modal pour suppression de photo-->
+        <div class="modal fade" id="DeleteannimauxModal" tabindex="-1" aria-labelledby="DeleteannimauxModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="DeleteannimauxModalLabel"> Etes-vous sur de vouloir supprimer</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!--formulaire dans la modal-->
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-3">
+                        <p>titre</p>
+                       <img src="../images/gettyimages-1316145932-612x612.jpg" class="rounded w-100"/>
+                      </div>
+          
+                      <div class="text-center">
+                          <button type="button" class="btn btn-danger">Supprimer</button>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                      </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mb-3"></div>
+        <div class="container">
+          <div class="text-center">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DeleteannimauxModal">Supprimer un annimale</button>
+          </div>
+        
+          <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+        
+          
+          </div>
+        
+          </div>
+        </div>
