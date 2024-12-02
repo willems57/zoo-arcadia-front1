@@ -1,7 +1,7 @@
-
+import { isConnected, getRole, showAndHideElementsForRoles } from "../js/script.js";
 import Route from "./Route.js";
 import { allRoutes, websiteName } from "./allRoutes.js";
-
+//import { showAndHideElementsForRoles } from "../js/auth/signin.js";
 
 // Création d'une route pour la page 404 (page introuvable)
 const route404 = new Route("404", "Page introuvable", "/pages/404.html", []);
@@ -25,34 +25,30 @@ const getRouteByUrl = (url) => {
 };
 
 // Fonction pour charger le contenu de la page
-const path = window.location.pathname;
-
+const LoadContentPage = async () => {
+  const path = window.location.pathname;
   // Récupération de l'URL actuelle
   const actualRoute = getRouteByUrl(path);
-  
-  //Vérifier les droits d'accès à la page
-const allRolesArray = actualRoute.authorize;
-
-if(allRolesArray.length > 0){
-  if(allRolesArray.includes("disconnected")){
-    if(isConnected()){
-      window.location.replace("/");
+  // verifier les droit d'acces a la page
+  const allRolesArray = actualRoute.authorize;
+  if(allRolesArray.length > 0){
+    if(allRolesArray.includes("disconnected")){
+      if(isConnected()){
+        window.location.replace("/");
+      }
+    }
+    else{
+      const roleUser = getRole();
+      if(!allRolesArray.includes(roleUser)){
+        window.location.replace("/");
+      }
     }
   }
-  else{
-    const roleUser = getRole();
-    if(!allRolesArray.includes(roleUser)){
-      window.location.replace("/");
-    }
-  }
-}
-
 
   // Récupération du contenu HTML de la route
   const html = await fetch(actualRoute.pathHtml).then((data) => data.text());
   // Ajout du contenu HTML à l'élément avec l'ID "main-page"
-document.getElementById("main-page").innerHTML = html;
-
+  document.getElementById("main-page").innerHTML = html;
 
   // Ajout du contenu JavaScript
   if (actualRoute.pathJS != "") {
@@ -67,9 +63,8 @@ document.getElementById("main-page").innerHTML = html;
 
   // Changement du titre de la page
   document.title = actualRoute.title + " - " + websiteName;
-
-  //afficher et masquer les elements en fonction du role 
   showAndHideElementsForRoles();
+}
 
 // Fonction pour gérer les événements de routage (clic sur les liens)
 const routeEvent = (event) => {
@@ -81,50 +76,10 @@ const routeEvent = (event) => {
   LoadContentPage();
 };
 
-function LoadContentPage() {
-  // Votre code ici
 // Gestion de l'événement de retour en arrière dans l'historique du navigateur
 window.onpopstate = LoadContentPage;
 // Assignation de la fonction routeEvent à la propriété route de la fenêtre
 window.route = routeEvent;
 // Chargement du contenu de la page au chargement initial
 LoadContentPage();
-}
 
-/*
-function showAndHideElementsForRoles(){
-  const userConnected = isConnected();
-  const role = getRole();
-
-  let allElementsToEdit = document.querySelectorAll('[data-show]');
-
-  allElementsToEdit.forEach(element =>{
-      switch(element.dataset.show){
-          case 'disconnected':
-              if(userConnected){
-                  element.classlist.add("d-none");
-              }
-              break;
-          case 'connected':
-              if(userConnected){
-                  element.classlist.add("d-none");
-              }
-              break;
-          case 'admin':
-              if(userConnected || role != "admin"){
-                  element.classlist.add("d-none");
-              }
-              break;
-          case 'employer':
-              if(userConnected || role != "employer"){
-                  element.classlist.add("d-none");
-              }
-              break;
-          case 'veterinaire':
-              if(userConnected || role != "veterinaire"){
-                  element.classlist.add("d-none");
-              }
-              break;
-      }
-  })
-}*/

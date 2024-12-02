@@ -1,5 +1,5 @@
 export default class Route {
-      constructor(url, title, pathHtml, authorize, pathJS = "") {
+      constructor(url, title, pathHtml,  authorize, pathJS = "") {
         this.url = url;
         this.title = title;
         this.pathHtml = pathHtml;
@@ -13,5 +13,5 @@ export default class Route {
   ["disconnected"] -> Reserver aux utilisateurs deconecter
   ["client"]Reserver aux utilisateurs client avec le role client
   ["admin"]Reserver aux utilisateurs admin avec le role amin
-  ["admin", "client"]Reserver aux utilisateurs admin avec le role client ou amin
+  ["admin", "employer", [veterinaire]Reserver aux utilisateurs admin avec le role client ou amin
   */
