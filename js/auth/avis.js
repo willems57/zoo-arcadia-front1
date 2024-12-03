@@ -1,12 +1,5 @@
-
-const galerieImage = document.getElementById("allImages");
-
-
-function sanitizeHtml(text) {
-    const tempHtml = document.createElement('div');
-    tempHtml.textContent = text;
-    return tempHtml.innerHTML;
-}
+import { sanitizeHtml } from "../script";
+const avisImage = document.getElementById("allavisImages");
 
 
 //recuperer les info des images 
@@ -16,7 +9,7 @@ let imgSource = "../images/images (1).jpg";
 
 let monImage = getImage(titre, imgSource);
 
-galerieImage.innerHTML = monImage;
+avisImage.innerHTML = monImage;
 
 
     function getImage(titre, urlImage){

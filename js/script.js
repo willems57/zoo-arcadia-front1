@@ -1,4 +1,4 @@
-export {getRole, setToken, getToken, isConnected, showAndHideElementsForRoles, RoleCookieName, tokenCookieName, signout, apiUrl};
+export {getRole, setToken, getToken, isConnected, showAndHideElementsForRoles, RoleCookieName, tokenCookieName, signout, apiUrl, sanitizeHtml, setCookie, getCookie, eraseCookie};
 const RoleCookieName = "role";
 const tokenCookieName = "accesstoken";
 const signoutBtn = document.getElementById("signout-btn");
@@ -103,3 +103,8 @@ function showAndHideElementsForRoles(){
 }
 
 
+function sanitizeHtml(text) {
+    const tempHtml = document.createElement('div');
+    tempHtml.textContent = text;
+    return tempHtml.innerHTML;
+}
