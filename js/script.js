@@ -78,11 +78,11 @@ function showAndHideElementsForRoles(){
                     element.classlist.add("d-none");
                 }
               break;
-            case 'connected':
+           /* case 'connected':
                 if(!userConnected){
                     element.classlist.add("d-none");
-                } 
-                break; 
+                }
+                break;  */
             case 'admin':
                 if(!userConnected || role != "admin"){
                     element.classlist.add("d-none");
