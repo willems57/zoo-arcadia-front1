@@ -1,4 +1,4 @@
-import { sanitizeHtml } from "../script";
+import { sanitizeHtml, getInfosUser } from "../script";
 const avisImage = document.getElementById("allavisImages");
 
 
